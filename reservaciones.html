@@ -1,0 +1,150 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/funcionesReservaciones.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      table,
+      th,
+
+      td {
+        border: 1px solid rgb(0, 166, 255);
+        border-collapse: collapse;
+
+      }
+
+      th {
+        background-color: #96c9d4;
+        text-align: center;
+
+
+      }
+
+      table,
+      th,
+      td {
+        background-color: #dde4e6;
+        border: 3px solid #0604048a;
+
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+
+
+      }
+    </style>
+
+
+  </head>
+
+  <body>
+
+    <nav class="bg-sky-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                alt="Your Company">
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="index.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  aria-current="page">Inicio</a>
+
+                <a href="categoria.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categoria</a>
+                <a href="tool.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tool</a>
+
+                <a href="cliente.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
+
+                <a href="mensajes.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mensajes</a>
+
+
+
+                <a href="reportes.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reportes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div>
+      <section class="text-gray-800 bg-gray-300 body-font relative">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-sky-700">Reservaciones</h1>
+          </div>
+
+
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-1/2">
+
+
+                <label>Escoja la fecha de inicio de la reserva</label>
+                <input type="date" id="startDate"><br>
+
+                <label>Escoja la fecha de devolucion de la reserva</label>
+                <input type="date" id="devolutionDate"><br>
+
+                <label>Escoja el status de la reserva</label>
+                <select id="status">
+                  <option value="completed">completada</option>
+                  <option value="cancelled">cancelada</option>
+                </select><br>
+
+                <label>Escoja el cliente</label>
+                <select id="select-client"></select><br>
+                <label>Escoja la herramienta</label>
+                <select id="select-tool"></select>
+              </div>
+              <div>
+
+
+                <br><button onclick="postReservaciones()"
+                  class="flex mx-auto text-white bg-cyan-900 border-0 py-2 px-8 focus:outline-none hover:bg-sky-600 rounded text-lg">
+                  Crear Reservacion
+                </button>
+              </div>
+
+
+
+
+              <script type="text/javascript">
+                window.onload = getTool_Reservaciones();
+              </script>
+
+              <script type="text/javascript">
+                window.onload = getClient_Reservaciones();
+              </script><br>
+
+              <script type="text/javascript">
+                window.onload = getReservaciones();
+              </script>
+
+              <div id="resultado4"></div>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </body>
+
+</html>

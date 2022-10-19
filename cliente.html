@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="js/funcionesCliente.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+      table,
+      th,
+
+      td {
+        border: 1px solid rgb(0, 166, 255);
+        border-collapse: collapse;
+
+      }
+
+      th {
+        background-color: #96c9d4;
+        text-align: center;
+
+
+      }
+
+      table,
+      th,
+      td {
+        background-color: #dde4e6;
+        border: 3px solid #0604048a;
+
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+
+
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <nav class="bg-sky-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                alt="Your Company">
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="index.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  aria-current="page">Inicio</a>
+
+                <a href="categoria.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categoria</a>
+                <a href="tool.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tool</a>
+
+
+
+                <a href="mensajes.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mensajes</a>
+
+                <a href="reservaciones.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservaciones</a>
+
+                <a href="reportes.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reportes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+
+    <section class="text-gray-800 bg-gray-300 body-font relative">
+      <section class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-sky-700">Clientes</h1>
+        </div>
+
+
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+
+
+          <div class="mb-3 xl:w-96">
+            <label for="exampleFormControlInput2"
+              class="form-label inline-block mb-2 text-gray-700 text-xl">IdCliente</label>
+            <input type="text" class="
+                                    form-control
+                                    block
+                                    w-full
+                                    px-4
+                                    py-2
+                                    text-xl
+                                    font-normal
+                                    text-gray-700
+                                    bg-white bg-clip-padding
+                                    border border-solid border-gray-300
+                                    rounded
+                                    transition
+                                    ease-in-out
+                                    m-0
+                                    focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-none
+                                  " id="idClient" placeholder="IdCliente" />
+          </div>
+
+          <div class="mb-3 xl:w-96">
+            <label for="exampleFormControlInput2" class="form-label inline-block mb-2 text-gray-700 text-xl">Email</label>
+            <input type="text" class="
+                                    form-control
+                                    block
+                                    w-full
+                                    px-4
+                                    py-2
+                                    text-xl
+                                    font-normal
+                                    text-gray-700
+                                    bg-white bg-clip-padding
+                                    border border-solid border-gray-300
+                                    rounded
+                                    transition
+                                    ease-in-out
+                                    m-0
+                                    focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-none
+                                  " id="email" placeholder="Email" />
+          </div>
+
+
+          <div class="mb-3 xl:w-96">
+            <label for="exampleFormControlInput2"
+              class="form-label inline-block mb-2 text-gray-700 text-xl">Password</label>
+            <input type="password" class="
+                                    form-control
+                                    block
+                                    w-full
+                                    px-4
+                                    py-2
+                                    text-xl
+                                    font-normal
+                                    text-gray-700
+                                    bg-white bg-clip-padding
+                                    border border-solid border-gray-300
+                                    rounded
+                                    transition
+                                    ease-in-out
+                                    m-0
+                                    focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-none
+                                  " id="password" placeholder="password" />
+          </div>
+
+          <div class="mb-3 xl:w-96">
+            <label for="exampleFormControlInput2"
+              class="form-label inline-block mb-2 text-gray-700 text-xl">Nombre</label>
+            <input type="text" class="
+                                    form-control
+                                    block
+                                    w-full
+                                    px-4
+                                    py-2
+                                    text-xl
+                                    font-normal
+                                    text-gray-700
+                                    bg-white bg-clip-padding
+                                    border border-solid border-gray-300
+                                    rounded
+                                    transition
+                                    ease-in-out
+                                    m-0
+                                    focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-none
+                                  " id="name" placeholder="name" />
+          </div>
+
+          <div class="mb-3 xl:w-96">
+            <label for="exampleFormControlInput2" class="form-label inline-block mb-2 text-gray-700 text-xl">Edad</label>
+            <input type="number" class="
+                                    form-control
+                                    block
+                                    w-full
+                                    px-4
+                                    py-2
+                                    text-xl
+                                    font-normal
+                                    text-gray-700
+                                    bg-white bg-clip-padding
+                                    border border-solid border-gray-300
+                                    rounded
+                                    transition
+                                    ease-in-out
+                                    m-0
+                                    focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-none
+                                  " id="age" placeholder="Edad" />
+          </div>
+
+          <button onclick="postCliente()"
+            class="flex mx-auto text-white bg-cyan-900 border-0 py-2 px-8 focus:outline-none hover:bg-sky-600 rounded text-lg">
+            Crear Cliente
+          </button><br>
+
+          <script type="text/javascript">
+            window.onload = getCliente();
+          </script>
+
+          <div id="resultado2"></div>
+      </div>
+    </section>
+
+  </body>
+
+</html>
